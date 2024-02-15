@@ -1,0 +1,6 @@
+02/15/2025-DuyNguyen's Changes: 
+	-Html: 
+		- Added a "Detail Page". 
+	-JS:
+		-Changes all <li>s into clickable links
+		-links the links to the Details page

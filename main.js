@@ -2,7 +2,7 @@ let ExpenseArray = [];
 let selectedType = "";
 
 document.addEventListener("DOMContentLoaded", function (event) {
-    
+    //pre- populate the array
     ExpenseArray.push ( new ExpenseObject("ipad", 1100, "School")  );
     ExpenseArray.push ( new ExpenseObject("Strawberries", 5, "Food")  );
     ExpenseArray.push ( new ExpenseObject("Blanket", 30, "Home")  );
@@ -54,7 +54,8 @@ function createList() {
 
     ExpenseArray.forEach(function (element) {   
         let li = document.createElement('li');
-        li.innerHTML = "Expense description: " + element.description + ", Price: $" + element.price + ", Category: " + element.category; 
+        //edit the listed item into a click able links
+        li.innerHTML = "<a href='#details'>Price: $" + element.price + "</a>"; 
         expenseList.appendChild(li);
         $("#expenseList").listview().listview("refresh");
     });
