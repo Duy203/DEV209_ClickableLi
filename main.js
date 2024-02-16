@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
         console.log(ExpenseArray[ExpenseArray.length - 1].show());
         
-        document.getElementById("description").value = "";
+        document.getElementById("name").value = "";
         document.getElementById("price").value = "";
         document.getElementById("date").value = "";
         document.getElementById("locationName").value = "";
@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     
     console.log(ExpenseArray[localID - 1]);
     
-    document.getElementById("Description").innerHTML = "Description: " + ExpenseArray[localID - 1].description;
+    document.getElementById("Name").innerHTML = "Name: " + ExpenseArray[localID - 1].name;
     document.getElementById("Price").innerHTML = "Price: $" + ExpenseArray[localID - 1].price;
     document.getElementById("Date").innerHTML = "Date: " + ExpenseArray[localID - 1].date;
     document.getElementById("LocationName").innerHTML = "Location: " + ExpenseArray[localID - 1].locationName;
@@ -54,8 +54,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
     
 });
 
-let ExpenseObject = function (pDescription, pPrice, pDate, pLocationName, pCategory, pId) {
-    this.description = pDescription;
+let ExpenseObject = function (pName, pPrice, pDate, pLocationName, pCategory, pId) {
+    this.name = pName;
     this.price = pPrice;
     this.date = pDate;
     this.locationName = pLocationName;
@@ -71,7 +71,7 @@ let ExpenseObject = function (pDescription, pPrice, pDate, pLocationName, pCateg
 let newExpense = function () {
     selectedType = document.getElementById("select-type").value;
     return new ExpenseObject(
-        document.getElementById("description").value,
+        document.getElementById("name").value,
         document.getElementById("price").value,
         document.getElementById("date").value,
         document.getElementById("locationName").value,
@@ -89,7 +89,7 @@ function createList() {
         li.classList.add('oneExpense');
         li.setAttribute("data-parm", oneExpense.id);
         //edit the listed item into a click able links
-        li.innerHTML = "<a href='#details'>Description: " + oneExpense.description + "</a>"; 
+        li.innerHTML = "<a href='#details'>Name: " + oneExpense.name + ",   Price: $" + oneExpense.price + "</a>"; 
         expenseList.appendChild(li);
     });
 
