@@ -21,6 +21,7 @@
         <div data-role="header" data-theme='b'>
             <div data-role="navbar" data-theme='b'>
                 <ul>
+                    <li><a href="#home">Home</a></li>
                     <li><a href="#input">Input</a></li>
                     <li><a href="#list">List</a></li>
                 </ul>
@@ -53,6 +54,7 @@
             <div data-role="navbar" data-theme='b'>
                 <ul>
                     <li><a href="#home">Home</a></li>
+                    <li><a href="#input">Input</a></li>
                     <li><a href="#list">List</a></li>
                 </ul>
             </div>
@@ -65,11 +67,19 @@
                 <form id="expenseForm">
                     <label for="description">Description:</label>
                     <input type="text" id="description" name="description" required>
+
                     <label for="price">Price:</label>
                     <input type="number" id="price" name="price" required>
 
+                    <label for="date">Date:</label>
+                    <input type="date" id="date" name="date" required>
+
+                    <label for="locationName">Location Name:</label>
+                    <input type="text" id="locationName" name="locationName">
+
                     <label for="select-type">Select a category</label>
                     <select name="select-type" id="select-type">
+                        <option disabled selected value> Select an option </option>
                         <option value="Food">Food</option>
                         <option value="Clothes">Clothes</option>
                         <option value="Home">Home</option>
@@ -96,6 +106,7 @@
                 <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#input">Input</a></li>
+                    <li><a href="#list">List</a></li>
                 </ul>
             </div>
             <h2>List</h2>
@@ -119,6 +130,13 @@
     <!--Added a Detail Page-->
     <div data-role="page" id="details">
         <div data-role="header" data-theme='b'>
+            <div data-role="navbar" data-theme='b'>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#input">Input</a></li>
+                    <li><a href="#list">List</a></li>
+                </ul>
+            </div>
             <h2>Expense Details</h2>
         </div>
 
@@ -126,13 +144,19 @@
             <div class="container">
                 <h1>Expense Detail</h1>
                 <div id="expenseDetail">
-                    <!-- Display Epxense Details-->
+                    <br>
+                    <p id="Description"></p>
+                    <p id="Price"></p>
+                    <p id="Date"></p>
+                    <p id="LocationName"></p>
+                    <p id="Category"></p>
+                    <button id="listButton">Back to List</button>
                 </div>
             </div>
         </div>
 
         <div data-role="footer" data-theme='b'>
-            <h3>Back to <a href="#list">List</a></h3>
+            <h3>Copyright 2024 by Kurt Friedrich</h3>
         </div>    
 
     </div>
